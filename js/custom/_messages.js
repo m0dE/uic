@@ -3,16 +3,7 @@
 jQuery(document).ready(function(){
 	"use strict";
 
-	INVETEX_STORAGE['message_callback'] = null;
-	INVETEX_STORAGE['message_timeout'] = 5000;
-
 	jQuery('body').on('click', '#invetex_modal_bg,.invetex_message .invetex_message_close', function (e) {
-		"use strict";
-		invetex_message_destroy();
-		if (INVETEX_STORAGE['message_callback']) {
-			INVETEX_STORAGE['message_callback'](0);
-			INVETEX_STORAGE['message_callback'] = null;
-		}
 		e.preventDefault();
 		return false;
 	});

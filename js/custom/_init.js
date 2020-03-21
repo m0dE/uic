@@ -2,8 +2,6 @@
 /* global INVETEX_STORAGE:false */
 jQuery(document).ready(function() {
     "use strict";
-    INVETEX_STORAGE['theme_init_counter'] = 0;
-    invetex_init_actions();
 });
 
 jQuery(window).on('beforeunload', function() {

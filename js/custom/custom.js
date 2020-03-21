@@ -4,6 +4,14 @@ var INVETEX_STORAGE = '';
 jQuery(document).ready(function() {
     "use strict";
     sliderInit();
+
+    jQuery("a").click(function(e){
+        e.preventDefault();
+        var toShow = jQuery(this).attr('href');
+      
+        jQuery(".toggle").slideUp();
+        jQuery(toShow).slideDown();
+      });
 });
 
 // Revolution slider initialization
@@ -84,10 +92,58 @@ function sliderInit() {
                     sliderType: "standard",
                     jsFileLocation: "//invetex.themerex.net/wp-content/plugins/revslider/public/assets/js/",
                     sliderLayout: "auto",
-                    minHeight: '780',
                     dottedOverlay: "none",
                     delay: 9000000,
+                    navigation: {
+                        keyboardNavigation: "off",
+                        keyboard_direction: "horizontal",
+                        mouseScrollNavigation: "off",
+                        mouseScrollReverse: "default",
+                        onHoverStop: "off",
+                        touch: {
+                            touchenabled: "on",
+                            swipe_threshold: 75,
+                            swipe_min_touches: 1,
+                            swipe_direction: "horizontal",
+                            drag_block_vertical: false
+                        },
+                        arrows: {
+                            style: "custom",
+                            enable: false,
+                            hide_onmobile: true,
+                            hide_under: 780,
+                            hide_onleave: false,
+                            tmp: '',
+                            left: {
+                                h_align: "left",
+                                v_align: "center",
+                                h_offset: 50,
+                                v_offset: 0
+                            },
+                            right: {
+                                h_align: "right",
+                                v_align: "center",
+                                h_offset: 50,
+                                v_offset: 0
+                            }
+                        },
+                        bullets: {
+                            enable: false,
+                            hide_onmobile: false,
+                            style: "custom",
+                            hide_onleave: false,
+                            direction: "horizontal",
+                            h_align: "center",
+                            v_align: "bottom",
+                            h_offset: 0,
+                            v_offset: 43,
+                            space: 8,
+                            tmp: ''
+                        }
+                    },
                     visibilityLevels: [1240, 1024, 778, 480],
+                    gridwidth: 1240,
+                    gridheight: 868,
                     lazyType: "none",
                     shadow: 0,
                     spinner: "off",
@@ -96,6 +152,15 @@ function sliderInit() {
                     stopAtSlide: -1,
                     shuffle: "off",
                     autoHeight: "off",
+                    fullScreenAutoWidth: "off",
+                    fullScreenAlignForce: "off",
+                    fullScreenOffsetContainer: "",
+                    fullScreenOffset: "",
+                    hideThumbsOnMobile: "off",
+                    hideSliderAtLimit: 0,
+                    hideCaptionAtLimit: 0,
+                    hideAllCaptionAtLilmit: 0,
+                    debugMode: false,
                     fallbacks: {
                         simplifyAll: "off",
                         nextSlideOnWindowFocus: "off",

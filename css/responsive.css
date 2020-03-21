@@ -1362,31 +1362,8 @@ Samsung Galaxy
 		padding-bottom: 20px;
 	}
 
-	/* Columns relayout (max 2 columns in the row) */
-	.row:not(.columns_fluid) > [class*="column-"], .columns_wrap:not(.columns_fluid) > [class*="column-"] {
-		width:50%;
-	}
-	.row:not(.columns_fluid) > .column-1_1, .row:not(.columns_fluid) > .column-2_2, .row:not(.columns_fluid) > .column-3_3, .row:not(.columns_fluid) > .column-4_4,
-	.row:not(.columns_fluid) > .column-5_5,	.row:not(.columns_fluid) > .column-6_6, .row:not(.columns_fluid) > .column-7_7, .row:not(.columns_fluid) > .column-8_8,
-	.row:not(.columns_fluid) > .column-9_9, .row:not(.columns_fluid) > .column-10_10,
-	.row:not(.columns_fluid) > .column-11_11, .row:not(.columns_fluid) > .column-12_12,
-	.columns_wrap:not(.columns_fluid) > .column-1_1, .columns_wrap:not(.columns_fluid) > .column-2_2, .columns_wrap:not(.columns_fluid) > .column-3_3,
-	.columns_wrap:not(.columns_fluid) > .column-4_4, .columns_wrap:not(.columns_fluid) > .column-5_5, .columns_wrap:not(.columns_fluid) > .column-6_6,
-	.columns_wrap:not(.columns_fluid) > .column-7_7, .columns_wrap:not(.columns_fluid) > .column-8_8, .columns_wrap:not(.columns_fluid) > .column-9_9,
-	.columns_wrap:not(.columns_fluid) > .column-10_10, .columns_wrap:not(.columns_fluid) > .column-11_11, .columns_wrap:not(.columns_fluid) > .column-12_12,
-	.row:not(.columns_fluid) > .column-1_3:nth-child(3n), .columns_wrap:not(.columns_fluid) > .column-1_3:nth-child(3n),
-	.row:not(.columns_fluid) > .column-2_3, .columns_wrap:not(.columns_fluid) > .column-2_3,
-/*	.row:not(.columns_fluid) > .column-1_3.after_span_2, .columns_wrap:not(.columns_fluid) > .column-1_3.after_span_2,*/
-	.row:not(.columns_fluid) > .column-2_4, .columns_wrap:not(.columns_fluid) > .column-3_4,
-/*	.row:not(.columns_fluid) > .column-1_4.after_span_2, .columns_wrap:not(.columns_fluid) > .column-1_4.after_span_3,*/
-/*	.row:not(.columns_fluid) > .column-1_5:nth-child(5n), .columns_wrap:not(.columns_fluid) > .column-1_5:nth-child(5n),*/
-	.row:not(.columns_fluid) > .column-2_5, .columns_wrap:not(.columns_fluid) > .column-2_5,
-	.row:not(.columns_fluid) > .column-3_5, .columns_wrap:not(.columns_fluid) > .column-3_5,
-	.row:not(.columns_fluid) > .column-4_5, .columns_wrap:not(.columns_fluid) > .column-4_5,
-	.row:not(.columns_fluid) > .column-2_6, .columns_wrap:not(.columns_fluid) > .column-2_6,
-	.row:not(.columns_fluid) > .column-3_6, .columns_wrap:not(.columns_fluid) > .column-3_6,
-	.row:not(.columns_fluid) > .column-4_6, .columns_wrap:not(.columns_fluid) > .column-4_6,
-	.row:not(.columns_fluid) > .column-5_6, .columns_wrap:not(.columns_fluid) > .column-5_6	{
+	
+	.column-1_3, .column-1_4, .column-2_3 {
 		width:100%;
 	}
 	.row:not(.columns_fluid) > [class*="column-"]:nth-child(2n+3), .columns_wrap:not(.columns_fluid) > [class*="column-"]:nth-child(2n+3),

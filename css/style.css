@@ -3018,15 +3018,13 @@ body:not(.top_panel_fixed) .top_panel_style_3.boxed_style .top_panel_middle {
     width: auto;
 }
 .top_panel_fixed .top_panel_wrap .logo {
-    margin-bottom: 0.6em;
-    margin-top: .9em;
+    margin: auto;`
 }
 .logo a {
     display: inline-block;
 }
 .logo img {
     float: left;
-    margin: 0 0.7857em 0.7857em 0;
     width: auto;
 }
 .logo_text,
@@ -3043,7 +3041,8 @@ body:not(.top_panel_fixed) .top_panel_style_3.boxed_style .top_panel_middle {
 }
 .top_panel_wrap .logo_fixed {
     display: none;
-    max-height: 42px;
+    max-height: 54px;
+    margin-top: 12px;
     width: auto;
 }
 .top_panel_fixed .top_panel_wrap .logo_fixed {

@@ -1,4 +1,7 @@
 <?php 
+ini_set('display_errors', 1);
+ini_set('display_startup_errors', 1);
+error_reporting(E_ALL);
 global $_REQUEST;
 $response = array('error'=>'');
 $contact_email = 'contact@uicbiz.com';
@@ -24,16 +27,18 @@ parse_str($_POST['data'], $post_data);
 				. "Reply-To: $user_email\n"
 				. "To: $contact_email\n"
 				. "From: $user_email\n";
-		
+		        $errorMessage = "Message sent successfully!";
 			if (!mail($contact_email, $subj, $msg, $head)) {
 				$response['error'] = 'Error send message!';
+$errorMessage = error_get_last()['message'];
 			}
 		} else 
 				$response['error'] = 'Error send message!';	
 		
 		
 
-	echo json_encode($post_data['username'].''.$post_data['email'].''$post_data['subject'].''.$post_data['message']);	
-	echo json_encode($response);
-	die();
+	// echo json_encode($post_data['username'].''.$post_data['email'].''$post_data['subject'].''.$post_data['message']);
+	// echo json_encode($response);
+        echo $errorMessage
+	//die();
 ?>

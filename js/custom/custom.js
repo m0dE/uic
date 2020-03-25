@@ -1,17 +1,22 @@
 var ajaxRevslider;
 var INVETEX_STORAGE = '';
 
-jQuery(document).ready(function() {
+$(document).ready(function() {
     "use strict";
     sliderInit();
 
-    jQuery("a").click(function(e){
-        e.preventDefault();
-        var toShow = jQuery(this).attr('href');
-      
-        jQuery(".toggle").slideUp();
-        jQuery(toShow).slideDown();
-      });
+    
+    $('a[href^="#"]').bind('click.smoothscroll',function (e) {
+      e.preventDefault();
+      var target = this.hash,
+          $target = $(target);
+  
+      $('html, body').stop().animate( {
+        'scrollTop': $target.offset().top
+      }, 900, 'swing', function () {
+        window.location.hash = target;
+      } );
+    } );
 });
 
 // Revolution slider initialization

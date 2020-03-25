@@ -5,10 +5,8 @@ error_reporting(E_ALL);
 
 global $_REQUEST;
 $response = array('error'=>'');
-$contact_email = 'contact@uicbiz.com';
+$contact_email = 'jaeyun@gmail.com';
 
-// type
-$type = $_REQUEST['type'];	
 // parse
 $user_name = stripslashes(strip_tags(trim($_POST['username'])));
 $user_email = stripslashes(strip_tags(trim($_POST['email'])));
@@ -25,20 +23,20 @@ if (trim($contact_email)!='') {
 		. "Reply-To: $user_email\n"
 		. "To: $contact_email\n"
 		. "From: $user_email\n";
-		$errorMessage = "Message sent successfully!";
+	$response = "Message sent successfully!";
+	
 	if (!mail($contact_email, $subj, $msg, $head)) {
-		$errorMessage = error_get_last()['message'];
-		$response['error'] = 'Error send message!';
+		$response = 'Error send message!';
 		
 	}
-} else 
-		$errorMessage = error_get_last()['message'];
-		$response['error'] = 'Error send message!';	
-
+} else {
+		$response = "contact email does not exist";
+//		$response['error'] = 'Error send message!';	
+}
 
 
 	// echo json_encode($_POST['username'].''.$_POST['email'].''$_POST['subject'].''.$_POST['message']);
 	// echo json_encode($response);
-    echo $errorMessage
+    echo $response;
 	//die();
 ?>

@@ -7,8 +7,6 @@ global $_REQUEST;
 $response = array('error'=>'');
 $contact_email = 'contact@uicbiz.com';
 
-// type
-$type = $_REQUEST['type'];	
 // parse
 $user_name = stripslashes(strip_tags(trim($_POST['username'])));
 $user_email = stripslashes(strip_tags(trim($_POST['email'])));
